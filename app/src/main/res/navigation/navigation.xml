@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.shoeapp_project1.fragment.LoginFragment"
+        android:label="LoginScreen"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_onBoardingFragment"
+            app:destination="@id/onBoardingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoardingFragment"
+        android:name="com.example.shoeapp_project1.fragment.OnBoardingFragment"
+        android:label="OnBoarding Screen"
+        tools:layout="@layout/fragment_on_boarding" >
+        <action
+            android:id="@+id/action_onBoardingFragment_to_instructionsFragment"
+            app:destination="@id/instructionsFragment"
+            app:popUpTo="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/instructionsFragment"
+        android:name="com.example.shoeapp_project1.fragment.InstructionsFragment"
+        android:label="Instruction Screen"
+        tools:layout="@layout/fragment_instructions" >
+        <action
+            android:id="@+id/action_instructionsFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/instructionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.shoeapp_project1.fragment.HomeFragment"
+        android:label="Home Screen"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_shoeDetailsFragment"
+            app:destination="@id/shoeDetailsFragment"
+            app:popUpTo="@id/homeFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/shoeDetailsFragment"
+        android:name="com.example.shoeapp_project1.fragment.ShoeDetailsFragment"
+        android:label="ShoeDetails"
+        tools:layout="@layout/fragment_shoe_details">
+        <action
+            android:id="@+id/action_shoeDetailsFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpToSaveState="true"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/homeFragment" />
+    </fragment>
+
+</navigation>

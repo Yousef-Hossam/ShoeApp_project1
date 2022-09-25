@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">ShoeApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="username">UserName</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="description">Description</string>
+    <string name="company_name">Company Name</string>
+    <string name="shoe_size">Shoe Size</string>
+    <string name="shoe_name">Shoe Name</string>
+    <string name="logout">Logout</string>
+</resources>

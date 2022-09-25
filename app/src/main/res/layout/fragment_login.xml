@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/loginFragment"
+    tools:context=".fragment.LoginFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:fillViewport="true"
+       >
+
+       <EditText
+           android:id="@+id/TxT_userName"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_margin="@dimen/default_margin"
+           android:ems="10"
+           android:hint="@string/username"
+           android:inputType="textPersonName"
+           android:minHeight="@dimen/min_height"
+           android:textColor="@color/black"
+           android:textSize="@dimen/default_text_size"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent"
+           android:autofillHints="" />
+
+       <EditText
+           android:id="@+id/TXT_password"
+           android:layout_width="match_parent"
+           android:layout_height="@dimen/min_height"
+           android:ems="10"
+           android:textSize="@dimen/default_text_size"
+           android:textColor="@color/black"
+           android:inputType="textPassword"
+           android:hint="@string/password"
+           android:textAllCaps="false"
+           android:layout_margin="@dimen/default_margin"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/TxT_userName"
+           android:autofillHints=""
+           android:importantForAutofill="no" />
+
+       <Button
+           android:id="@+id/login_button"
+           android:layout_width="200dp"
+           android:layout_height="@dimen/min_height"
+           android:text="@string/login"
+           android:textSize="@dimen/default_text_size"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/TXT_password" />
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

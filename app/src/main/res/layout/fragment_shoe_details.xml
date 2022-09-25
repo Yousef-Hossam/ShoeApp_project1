@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragment.ShoeDetailsFragment">
+    <data>
+        <variable
+            name="shoeData"
+            type="com.example.shoeapp_project1.model.Shoe" />
+    </data>
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/editText_name"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/min_height"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:layout_margin="@dimen/default_margin"
+            android:hint="@string/shoe_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <EditText
+            android:id="@+id/editText_size"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/min_height"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:hint="@string/shoe_size"
+            android:layout_margin="@dimen/default_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editText_name" />
+        <EditText
+            android:id="@+id/editText_company"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/min_height"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="@string/company_name"
+            android:layout_margin="@dimen/default_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editText_size" />
+        <EditText
+            android:id="@+id/editText_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/min_height"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="@string/description"
+            android:layout_margin="@dimen/default_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editText_company" />
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="@dimen/default_margin"
+            android:gravity="center"
+            android:text="@string/save"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText_desc" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/min_height"
+            android:layout_marginTop="@dimen/default_margin"
+            android:layout_marginEnd="50dp"
+            android:text="@string/cancel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText_desc" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>
